@@ -10,9 +10,10 @@
 #include <zephyr/drivers/adc.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/kernel.h>
-#include <zmk/input_processor.h>
-#include <zmk/event_manager.h>
 #include <zmk/events/input_event.h>
+#include <zmk/endpoints.h>
+
+/* input_processor.h と event_manager.h は v0.3 では不要なため削除しました */
 
 LOG_MODULE_REGISTER(zmk_analog_input, CONFIG_ZMK_INPUT_LOG_LEVEL);
 
