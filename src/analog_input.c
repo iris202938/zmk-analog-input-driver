@@ -10,10 +10,13 @@
 #include <zephyr/drivers/adc.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/kernel.h>
-#include <zmk/events/input_event.h>
+
+/* v0.3 互換のインクルードパス */
+#include <zmk/mouse.h>
 #include <zmk/endpoints.h>
 
-/* input_processor.h と event_manager.h は v0.3 では不要なため削除しました */
+/* もし上記でエラーが出る場合は、以下を試すためにこの行をコメントアウトしてください */
+/* #include <zmk/events/mouse_state_changed.h> */
 
 LOG_MODULE_REGISTER(zmk_analog_input, CONFIG_ZMK_INPUT_LOG_LEVEL);
 
